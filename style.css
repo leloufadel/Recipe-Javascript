@@ -285,6 +285,7 @@ nav {
   }
   input[type="text"],
   input[type="file"],
+  input[type="number"],
   select,
   textarea {
     padding: 10px;
@@ -305,6 +306,26 @@ nav {
     box-sizing: border-box;
     display: inline-block;
     cursor: pointer;
+  }
+  .add-Button {
+    background-color: var(--clr-gold);
+    color: var(--clr-black);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+  }
+  
+  .add-Button:hover {
+    background-color: var(--clr-gold-light); 
+  }
+  
+  .add-Button i {
+    margin-right: 5px;
+    font-size: 1.6rem;
+
   }
   
 @media screen and (min-width: 768px) {

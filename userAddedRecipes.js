@@ -60,48 +60,50 @@ function saveMenuToLocalStorage() {
 }
 
 function addUserRecipe() {
-    const newTitle = document.getElementById("new-title").value;
-    const newCategory = document.getElementById("new-category").value;
-    const newPrice = parseFloat(document.getElementById("new-price").value);
-    const newImage = document.getElementById("new-image").value;
-    const newDescription = document.getElementById("new-description").value;
-  
-    if (newTitle && newCategory && !isNaN(newPrice) && newImage && newDescription) {
-      const newRecipe = {
-        id: generateUniqueId(),
-        title: newTitle,
-        category: newCategory,
-        price: newPrice,
-        img: newImage,
-        desc: newDescription,
-      };
-  
-      // Log the details to the console
-      console.log("New Recipe Details:");
-      console.log("Title:", newRecipe.title);
-      console.log("Category:", newRecipe.category);
-      console.log("Price:", newRecipe.price);
-      console.log("Image URL:", newRecipe.img);
-      console.log("Description:", newRecipe.desc);
-  
-      userAddedMenu.push(newRecipe);
-  
-      saveMenuToLocalStorage();
-      displayUserAddedRecipes(userAddedMenu);
-      displayMenuBtns([userAddedMenu]); // Update the displayed menu on index.html
-  
-      // Reset form fields
-      document.getElementById("new-title").value = "";
-      document.getElementById("new-category").value = "Breakfast";
-      document.getElementById("new-price").value = "";
-      document.getElementById("new-image").value = "";
-      document.getElementById("new-description").value = "";
-    } else {
-      alert("Please fill in all fields.");
-    }
+  const newTitle = document.getElementById("new-title").value;
+  const newCategory = document.getElementById("new-category").value;
+  const newPrice = parseFloat(document.getElementById("new-price").value);
+  const newImage = document.getElementById("new-image").value;
+  const newDescription = document.getElementById("new-description").value;
+
+  if (newTitle && newCategory && !isNaN(newPrice) && newImage && newDescription) {
+    const newRecipe = {
+      id: generateUniqueId(),
+      title: newTitle,
+      category: newCategory,
+      price: newPrice,
+      img: newImage,
+      desc: newDescription,
+    };
+
+    // Log the details to the console
+    console.log("New Recipe Details:");
+    console.log("Title:", newRecipe.title);
+    console.log("Category:", newRecipe.category);
+    console.log("Price:", newRecipe.price);
+    console.log("Image URL:", newRecipe.img);
+    console.log("Description:", newRecipe.desc);
+
+    userAddedMenu.push(newRecipe);
+
+    saveMenuToLocalStorage();
+    displayUserAddedRecipes(userAddedMenu);
+    displayMenuBtns([userAddedMenu]); // Update the displayed menu on index.html
+
+    // Reset form fields
+    document.getElementById("new-title").value = "";
+    document.getElementById("new-category").value = "Breakfast";
+    document.getElementById("new-price").value = "";
+    document.getElementById("new-image").value = "";
+    document.getElementById("new-description").value = "";
+    
+    // Display success message
+    alert("Recipe added successfully");
+  } else {
+    alert("Please fill in all fields.");
   }
-  
-  
+}
+
 
 function deleteUserAddedRecipe(index) {
   userAddedMenu.splice(index, 1);
