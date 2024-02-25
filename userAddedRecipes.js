@@ -11,6 +11,14 @@ window.addEventListener("DOMContentLoaded", function () {
 
 function displayUserAddedRecipes(menuItems) {
   let displayMenu = menuItems.map(function (item, index) {
+    let buttons = '';
+    if (!(item.title === "Buttermilk Pancakes" || item.title === "Lunch Double")) {
+      buttons = `
+        <button type="button" onclick="deleteUserAddedRecipe(${index})"><i class="fa fa-trash"></i></button>
+        <i class="fa fa-pencil-square-o"></i>
+      `;
+    }
+    
     return `<article class="menu-item">
       <img src="${item.img}" alt="${item.title}" class="photo">
       <div class="item-info">
@@ -20,8 +28,7 @@ function displayUserAddedRecipes(menuItems) {
         </header>
         <p class="item-text">${item.desc}</p>
         <div class="icons">
-          <button type="button" onclick="deleteUserAddedRecipe(${index})"><i class="fa fa-trash"></i></button>
-          <i class="fa fa-pencil-square-o"></i>
+          ${buttons}
         </div>
       </div>
     </article>`;
@@ -29,6 +36,7 @@ function displayUserAddedRecipes(menuItems) {
 
   sectionCenter.innerHTML = displayMenu.join("");
 }
+
 
 function displayMenuBtns(menuItems) {
   const categoryItems = menuItems.reduce(function(value, item) {
