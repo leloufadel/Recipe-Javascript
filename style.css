@@ -327,6 +327,30 @@ nav {
     font-size: 1.6rem;
 
   }
+  /* Style for the delete button */
+.menu-item .icons button[type="button"] {
+  background-color: #ff6347; /* Red color */
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Style for the edit icon */
+.menu-item .icons i.fa-pencil-square-o {
+  background-color: #007bff; /* Red color */
+  color: white;
+  margin-left: 10px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+
+
+  
+}
+
   
 @media screen and (min-width: 768px) {
   .menu-item {
