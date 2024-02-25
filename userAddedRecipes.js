@@ -98,11 +98,12 @@ function addUserRecipe() {
     document.getElementById("new-description").value = "";
     
     // Display success message
-    alert("Recipe added successfully");
+    alert("Recipe added successfully!");
   } else {
     alert("Please fill in all fields.");
   }
 }
+
 
 
 function deleteUserAddedRecipe(index) {
