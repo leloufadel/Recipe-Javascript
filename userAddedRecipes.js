@@ -112,31 +112,31 @@ function addUserRecipe() {
   }
 }
 
-// Create two sample recipe objects
-const recipe1 = {
-  id: generateUniqueId(),
-  title: "Buttermilk Pancakes",
-  category: "Breakfast",
-  price: 15.99,
-  img: "./images/item-1.jpeg",
-  desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed`,
-};
+// // Create two sample recipe objects
+// const recipe1 = {
+//   id: generateUniqueId(),
+//   title: "Buttermilk Pancakes",
+//   category: "Breakfast",
+//   price: 15.99,
+//   img: "./images/item-1.jpeg",
+//   desc: `I'm baby woke mlkshk wolf bitters live-edge blue bottle, hammock freegan copper mug whatever cold-pressed`,
+// };
 
-const recipe2 = {
-  id: generateUniqueId(),
-  title: "Lunch Double",
-  category: "Lunch",
-  price: 13.99,
-  img: "./images/item-2.jpeg",
-  desc: `Vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats`,
-};
+// const recipe2 = {
+//   id: generateUniqueId(),
+//   title: "Lunch Double",
+//   category: "Lunch",
+//   price: 13.99,
+//   img: "./images/item-2.jpeg",
+//   desc: `Vaporware iPhone mumblecore selvage raw denim slow-carb leggings gochujang helvetica man braid jianbing. Marfa thundercats`,
+// };
 
-// Add the sample recipes to the userAddedMenu array
-userAddedMenu.push(recipe1, recipe2);
+// // Add the sample recipes to the userAddedMenu array
+// userAddedMenu.push(recipe1, recipe2);
 
-// Call the display functions to update the displayed recipes and menu buttons
-displayUserAddedRecipes(userAddedMenu);
-displayMenuBtns(userAddedMenu);
+// // Call the display functions to update the displayed recipes and menu buttons
+// displayUserAddedRecipes(userAddedMenu);
+// displayMenuBtns(userAddedMenu);
 
 
 function deleteUserAddedRecipe(index) {
@@ -149,3 +149,4 @@ function deleteUserAddedRecipe(index) {
 function generateUniqueId() {
   return new Date().getTime();
 }
+
